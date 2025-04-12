@@ -18,6 +18,7 @@ import {
 
 import { getCompanies } from "@/api/apiCompanies";
 import { getJobs } from "@/api/apiJobs";
+import { Link } from "react-router-dom";
 
 const JobListing = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -77,6 +78,11 @@ const JobListing = () => {
       <h1 className="gradient-title font-extrabold text-6xl sm:text-7xl text-center pb-8">
         Latest Jobs
       </h1>
+      <Link to={"https://sensai-ebon-five.vercel.app/"}>
+        <Button variant="blue" size="xl">
+          Want to prepare for Interview ?
+        </Button>
+      </Link>
       <form
         onSubmit={handleSearch}
         className="h-14 flex flex-row w-full gap-2 items-center mb-3"
